@@ -47,3 +47,6 @@
   .glasses { justify-content: space-between; }
   .glass { width: 46px; height: 60px; }
 }
+
+/* Utility: hide the nav CTA on small screens */
+@media (max-width: 900px) { .hide-sm { display: none; } }
