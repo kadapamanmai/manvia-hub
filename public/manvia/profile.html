@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Wellness Space — Profile &amp; Recovery | MANVIA</title>
+  <meta name="description" content="Manage your MANVIA profile, fitness goal, recovery tracker, daily check-in and app settings — all saved to your device." />
+  <meta property="og:title" content="Your Wellness Space — Profile &amp; Recovery | MANVIA" />
+  <meta property="og:description" content="Profile settings, fitness goals, recovery tracking and daily wellness check-in." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <main>
+    <section class="page-hero">
+      <div class="orb orb-green" style="top:-200px;left:-120px"></div>
+      <div class="container" style="position:relative;z-index:2">
+        <span class="eyebrow anim-up">Profile</span>
+        <h1 class="anim-up delay-1" style="margin:1.1rem 0">Your Wellness Space</h1>
+        <div class="row anim-up delay-2" style="gap:1rem;margin-top:1.5rem">
+          <img class="avatar" style="width:64px;height:64px" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Profile photo of Manmai" />
+          <div><strong id="profileName" style="font-size:1.15rem">Manmai</strong><br /><small class="muted">Fitness Enthusiast</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:2.5rem">
+      <div class="container">
+        <div class="grid g-4">
+          <div class="card reveal"><div class="stat" style="text-align:left"><div class="num"><span data-count="12">0</span></div><div class="label">Day Streak 🔥</div></div></div>
+          <div class="card reveal d1"><div class="stat" style="text-align:left"><div class="num"><span data-count="24">0</span></div><div class="label">Workouts</div></div></div>
+          <div class="card reveal d2"><div class="stat" style="text-align:left"><div class="num"><span data-count="68420">0</span></div><div class="label">Total Steps</div></div></div>
+          <div class="card reveal d3"><div class="stat" style="text-align:left"><div class="num"><span data-count="18">0</span></div><div class="label">Classes</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container split">
+        <div class="card reveal">
+          <h2 style="font-size:1.5rem">Profile Settings</h2>
+          <form id="profileForm" class="grid" style="gap:1rem;margin-top:1.2rem">
+            <label class="field">Name<input class="input" name="name" value="Manmai" required /></label>
+            <label class="field">Email<input class="input" type="email" name="email" value="manmai@manvia.fit" required /></label>
+            <label class="field">Fitness Goal<input class="input" name="goalText" value="Build strength and stay consistent" /></label>
+            <label class="field">Preferred Workout
+              <select class="input" name="preferred">
+                <option>Strength</option><option>Cardio</option><option>Yoga</option><option>Mobility</option><option>HIIT</option>
+              </select>
+            </label>
+            <label class="field">Activity Level
+              <select class="input" name="activity">
+                <option>Lightly active</option><option>Moderately active</option><option>Very active</option>
+              </select>
+            </label>
+            <button class="btn btn-primary" type="submit">Save Changes</button>
+          </form>
+        </div>
+
+        <div class="grid" style="gap:1.5rem;align-content:start">
+          <div class="card reveal d1">
+            <h2 style="font-size:1.5rem">Fitness Goal</h2>
+            <div class="grid g-2" id="goalOptions" style="margin-top:1.2rem;gap:.75rem"></div>
+          </div>
+          <div class="card reveal d2">
+            <h2 style="font-size:1.5rem">Daily Check-in</h2>
+            <p style="margin:.5rem 0 1.1rem">How are you feeling today?</p>
+            <div class="row" id="checkinOptions" style="gap:.5rem"></div>
+            <p class="note" id="checkinStatus" style="margin-top:1.1rem;display:none"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Recovery</span><h2 style="margin-top:.9rem">Recovery Tracker</h2></div>
+        <div class="grid g-4" id="recoveryGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container" style="max-width:720px">
+        <div class="card reveal">
+          <h2 style="font-size:1.5rem;margin-bottom:.6rem">Settings</h2>
+          <div class="setting-row"><div><strong>Dark Mode</strong><br /><small class="muted">Switch between dark and light themes</small></div><button class="switch" id="setDark" aria-label="Toggle dark mode"></button></div>
+          <div class="setting-row"><div><strong>Notifications</strong><br /><small class="muted">Workout reminders and streak alerts</small></div><button class="switch" id="setNotif" aria-label="Toggle notifications"></button></div>
+          <div class="setting-row"><div><strong>Email Updates</strong><br /><small class="muted">Weekly progress summary by email</small></div><button class="switch" id="setEmail" aria-label="Toggle email updates"></button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

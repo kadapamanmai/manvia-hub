@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nutrition &amp; Wellness — Fuel Your Progress | MANVIA</title>
+  <meta name="description" content="Balanced meal ideas, a daily wellness plan, an interactive hydration tracker and habit tracking to support your training at MANVIA." />
+  <meta property="og:title" content="Nutrition &amp; Wellness — Fuel Your Progress | MANVIA" />
+  <meta property="og:description" content="Simple, balanced nutrition ideas plus hydration and habit tracking for everyday wellness." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <main>
+    <section class="page-hero">
+      <div class="orb orb-green" style="top:-200px;left:-120px"></div>
+      <div class="container" style="position:relative;z-index:2">
+        <span class="eyebrow anim-up">Nutrition &amp; wellness</span>
+        <h1 class="anim-up delay-1" style="margin:1.1rem 0">Fuel Your Progress</h1>
+        <p class="lead anim-up delay-2">Discover simple, balanced nutrition ideas for everyday wellness.</p>
+        <p class="note anim-up delay-3" style="margin-top:1.5rem;max-width:60ch">These are general wellness examples for inspiration — not medical or dietary advice. Speak to a qualified professional for personalised plans.</p>
+      </div>
+    </section>
+
+    <!-- MEALS -->
+    <section class="section" style="padding-top:2.5rem">
+      <div class="container">
+        <div class="section-head row between reveal" style="max-width:none;align-items:flex-end">
+          <div><span class="eyebrow">Meal ideas</span><h2 style="margin-top:.9rem">Balanced Plates</h2></div>
+          <div class="filters" id="mealFilters"></div>
+        </div>
+        <div class="grid g-3" id="mealGrid"></div>
+      </div>
+    </section>
+
+    <!-- DAILY PLAN -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Today's focus</span><h2 style="margin-top:.9rem">Daily Wellness Plan</h2></div>
+        <div class="grid g-4" id="dailyPlan"></div>
+      </div>
+    </section>
+
+    <!-- HYDRATION -->
+    <section class="section">
+      <div class="container">
+        <div class="split">
+          <div class="card reveal">
+            <span class="eyebrow">Hydration tracker</span>
+            <h2 style="margin:1rem 0 .4rem">Water Intake</h2>
+            <p>Target: <strong class="accent">2.5 L</strong> · Current intake: <strong id="waterLitres">1.8 L</strong></p>
+            <div class="bar" style="margin:1.2rem 0"><span id="waterBar" style="width:0"></span></div>
+            <p class="muted" id="waterPct" style="margin-bottom:1.2rem">72% of your daily goal</p>
+            <div class="glasses" id="glasses"></div>
+            <div class="row" style="margin-top:1.4rem">
+              <button class="btn btn-ghost btn-sm" id="waterReset"><i class="fa-solid fa-rotate-left"></i> Reset day</button>
+              <button class="btn btn-primary btn-sm" id="waterFill">Fill next glass</button>
+            </div>
+          </div>
+          <div class="media reveal d1">
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1100&q=80" alt="Fresh healthy meal with vegetables and grains on a table" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABITS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Your weekly goal</span><h2 style="margin-top:.9rem">Wellness Habits</h2></div>
+        <div class="grid g-4" id="habitGrid"></div>
+      </div>
+    </section>
+
+    <!-- FOOD GALLERY -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Inspiration</span><h2 style="margin-top:.9rem">Eat well, train well</h2></div>
+        <div class="grid g-3">
+          <div class="media reveal"><img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=900&q=80" alt="Healthy breakfast of toast, eggs and fruit" loading="lazy" /></div>
+          <div class="media reveal d1"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80" alt="Protein-rich bowl with chicken, greens and grains" loading="lazy" /></div>
+          <div class="media reveal d2"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=80" alt="Assortment of fresh fruits and vegetables" loading="lazy" /></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/nutrition.js"></script>
+</body>
+</html>

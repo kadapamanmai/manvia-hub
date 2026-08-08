@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Membership Plans — Starter, Pro &amp; Elite | MANVIA</title>
+  <meta name="description" content="Compare MANVIA membership plans: Starter, Pro and Elite. Flexible monthly or yearly billing with trainer sessions, class booking and analytics." />
+  <meta property="og:title" content="Membership Plans — Starter, Pro &amp; Elite | MANVIA" />
+  <meta property="og:description" content="Flexible fitness memberships with workouts, nutrition guidance, trainers and analytics." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <main>
+    <section class="page-hero">
+      <div class="orb orb-lime" style="top:-160px;left:40%"></div>
+      <div class="container" style="position:relative;z-index:2;text-align:center">
+        <span class="eyebrow anim-up">Membership</span>
+        <h1 class="anim-up delay-1" style="margin:1.1rem 0">Choose Your Membership</h1>
+        <p class="lead anim-up delay-2" style="margin-inline:auto">Flexible plans designed for your fitness journey.</p>
+        <div class="anim-up delay-3" style="margin-top:2rem">
+          <div class="toggle-pill" id="billingToggle">
+            <button class="active" data-cycle="monthly">Monthly</button>
+            <button data-cycle="yearly">Yearly · save 17%</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:2.5rem">
+      <div class="container"><div class="grid g-3" id="planGrid"></div></div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Compare</span><h2 style="margin-top:.9rem">Feature Comparison</h2></div>
+        <div class="table-wrap reveal">
+          <table>
+            <thead><tr><th>Feature</th><th class="center">Starter</th><th class="center">Pro</th><th class="center">Elite</th></tr></thead>
+            <tbody id="compareBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:820px">
+        <div class="section-head reveal"><span class="eyebrow">FAQ</span><h2 style="margin-top:.9rem">Questions, answered</h2></div>
+        <div class="grid" style="gap:.75rem" id="faqList"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/membership.js"></script>
+</body>
+</html>

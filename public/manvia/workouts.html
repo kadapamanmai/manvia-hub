@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workouts — Find Your Perfect Routine | MANVIA</title>
+  <meta name="description" content="Browse the MANVIA workout library: strength, cardio, HIIT, yoga and mobility routines with guided exercises and a built-in workout timer." />
+  <meta property="og:title" content="Workouts — Find Your Perfect Routine | MANVIA" />
+  <meta property="og:description" content="Filter strength, cardio, HIIT, yoga and mobility workouts, then train with a guided timer." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <main>
+    <section class="page-hero">
+      <div class="orb orb-lime" style="top:-160px;right:-80px"></div>
+      <div class="container" style="position:relative;z-index:2">
+        <span class="eyebrow anim-up">Workout library</span>
+        <h1 class="anim-up delay-1" style="margin:1.1rem 0">Find Your Perfect Workout</h1>
+        <p class="lead anim-up delay-2">Train with purpose. Choose a routine that fits your goals.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:2.5rem">
+      <div class="container">
+        <div class="card reveal" style="display:grid;gap:1.1rem">
+          <div class="row between" style="gap:1rem">
+            <div style="flex:1;min-width:240px;position:relative">
+              <input class="input" id="workoutSearch" type="search" placeholder="Search workouts, e.g. 'core', 'yoga'..." aria-label="Search workouts" />
+            </div>
+            <span class="chip" id="resultCount">9 workouts</span>
+          </div>
+          <div class="filters" id="workoutFilters" role="group" aria-label="Workout filters"></div>
+        </div>
+
+        <div class="grid g-3" id="workoutGrid" style="margin-top:2rem"></div>
+        <p id="emptyState" class="muted" style="display:none;margin-top:2rem">No workouts match your filters. Try clearing the search.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Workout detail modal -->
+  <div class="modal" id="workoutModal" role="dialog" aria-modal="true" aria-label="Workout details">
+    <div class="modal-panel" style="position:relative">
+      <button class="modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div id="workoutModalContent"></div>
+    </div>
+  </div>
+
+  <!-- Timer modal -->
+  <div class="modal" id="timerModal" role="dialog" aria-modal="true" aria-label="Workout timer">
+    <div class="modal-panel" style="position:relative;max-width:520px">
+      <button class="modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body" style="text-align:center">
+        <span class="eyebrow" style="justify-self:center">Now training</span>
+        <h3 id="timerWorkoutName">Workout</h3>
+        <p id="timerExercise" style="color:var(--text);font-weight:600">Exercise 1 of 5</p>
+        <div class="timer-display" id="timerDisplay">00:00</div>
+        <div class="bar"><span id="timerBar" style="width:0"></span></div>
+        <div class="row" style="justify-content:center;margin-top:.6rem">
+          <button class="btn btn-primary" id="timerStart"><i class="fa-solid fa-play"></i> Start</button>
+          <button class="btn btn-ghost" id="timerPause"><i class="fa-solid fa-pause"></i> Pause</button>
+          <button class="btn btn-ghost" id="timerReset"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+        </div>
+        <button class="btn btn-dark btn-block" id="timerComplete">Mark workout complete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/workouts.js"></script>
+</body>
+</html>

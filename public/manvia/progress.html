@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Progress Dashboard — Track Every Session | MANVIA</title>
+  <meta name="description" content="Track weekly workouts, calories burned, fitness score, achievements and personal goals on your MANVIA progress dashboard." />
+  <meta property="og:title" content="Your Progress Dashboard — Track Every Session | MANVIA" />
+  <meta property="og:description" content="Charts, streaks, achievements and personal goals — see how your training is going." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <main>
+    <section class="page-hero">
+      <div class="orb orb-lime" style="top:-160px;right:-60px"></div>
+      <div class="container" style="position:relative;z-index:2">
+        <span class="eyebrow anim-up">Dashboard</span>
+        <h1 class="anim-up delay-1" style="margin:1.1rem 0">Your Progress</h1>
+        <p class="lead anim-up delay-2">Small improvements create big results.</p>
+      </div>
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="section" style="padding-top:2.5rem">
+      <div class="container">
+        <div class="grid g-4">
+          <div class="card card-hover reveal"><span class="chip"><i class="fa-solid fa-dumbbell"></i> This week</span><div class="stat" style="text-align:left;padding:1rem 0 0"><div class="num"><span data-count="5">0</span></div><div class="label">Weekly Workouts</div></div></div>
+          <div class="card card-hover reveal d1"><span class="chip"><i class="fa-solid fa-stopwatch"></i> Minutes</span><div class="stat" style="text-align:left;padding:1rem 0 0"><div class="num"><span data-count="320">0</span></div><div class="label">Active Minutes</div></div></div>
+          <div class="card card-hover reveal d2"><span class="chip"><i class="fa-solid fa-fire"></i> Energy</span><div class="stat" style="text-align:left;padding:1rem 0 0"><div class="num"><span data-count="2840">0</span></div><div class="label">Calories Burned</div></div></div>
+          <div class="card card-hover reveal d3"><span class="chip">🔥 Streak</span><div class="stat" style="text-align:left;padding:1rem 0 0"><div class="num"><span data-count="12">0</span></div><div class="label">Current Streak (days)</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHARTS -->
+    <section class="section" style="padding-top:0">
+      <div class="container grid g-2">
+        <div class="card reveal">
+          <h3 style="margin-bottom:1rem">Weekly Workout Activity</h3>
+          <div class="chart-box"><canvas id="activityChart" aria-label="Weekly workout activity line chart" role="img"></canvas></div>
+        </div>
+        <div class="card reveal d1">
+          <h3 style="margin-bottom:1rem">Calories Burned</h3>
+          <div class="chart-box"><canvas id="caloriesChart" aria-label="Calories burned bar chart" role="img"></canvas></div>
+        </div>
+        <div class="card reveal">
+          <h3 style="margin-bottom:1rem">Monthly Progress</h3>
+          <div class="chart-box sm"><canvas id="monthlyChart" aria-label="Monthly progress doughnut chart" role="img"></canvas></div>
+        </div>
+        <div class="card reveal d1">
+          <h3 style="margin-bottom:1rem">Fitness Score Breakdown</h3>
+          <div class="chart-box sm"><canvas id="scoreChart" aria-label="Fitness score radar chart" role="img"></canvas></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FITNESS SCORE -->
+    <section class="section">
+      <div class="container">
+        <div class="card reveal" style="display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center">
+          <div>
+            <div id="scoreRing"></div>
+            <p class="muted" style="text-align:center;margin-top:.6rem">Fitness Score</p>
+          </div>
+          <div class="grid g-4" id="scoreBreakdown"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">New achievement unlocked</span><h2 style="margin-top:.9rem">Achievements</h2></div>
+        <div class="grid g-4" id="achievements"></div>
+      </div>
+    </section>
+
+    <!-- GOALS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Your weekly goal</span><h2 style="margin-top:.9rem">Personal Goals</h2></div>
+        <div class="grid g-3" id="goalGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/progress.js"></script>
+</body>
+</html>

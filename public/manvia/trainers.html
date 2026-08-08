@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trainers &amp; Class Schedule — Train With The Best | MANVIA</title>
+  <meta name="description" content="Meet MANVIA's expert trainers in strength, yoga, HIIT, mobility and nutrition coaching, and book classes from the weekly schedule." />
+  <meta property="og:title" content="Trainers &amp; Class Schedule — Train With The Best | MANVIA" />
+  <meta property="og:description" content="Browse trainer profiles, certifications and available slots, then book your weekly classes." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <main>
+    <section class="page-hero">
+      <div class="orb orb-green" style="top:-200px;right:-140px"></div>
+      <div class="container" style="position:relative;z-index:2">
+        <span class="eyebrow anim-up">Coaching</span>
+        <h1 class="anim-up delay-1" style="margin:1.1rem 0">Train With The Best</h1>
+        <p class="lead anim-up delay-2">Certified coaches who build programmes around your body, your schedule and your goals.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:2.5rem">
+      <div class="container">
+        <div class="grid g-3" id="trainerGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="schedule">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Weekly schedule</span><h2 style="margin-top:.9rem">Book Your Classes</h2><p class="lead">Live classes across strength, yoga, HIIT, mobility and functional training.</p></div>
+        <div class="day-tabs" id="dayTabs"></div>
+        <div id="classList" style="margin-top:1.4rem"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="trainerModal" role="dialog" aria-modal="true" aria-label="Trainer profile">
+    <div class="modal-panel" style="position:relative">
+      <button class="modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div id="trainerModalContent"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="bookingModal" role="dialog" aria-modal="true" aria-label="Booking confirmation">
+    <div class="modal-panel" style="position:relative;max-width:480px">
+      <button class="modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body" style="text-align:center">
+        <div class="feature-icon" style="justify-self:center;margin:0 auto"><i class="fa-solid fa-circle-check"></i></div>
+        <h3>Booking confirmed</h3>
+        <p id="bookingDetails">Your class is booked.</p>
+        <button class="btn btn-primary btn-block" data-close-modal>Done</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/trainers.js"></script>
+</body>
+</html>
